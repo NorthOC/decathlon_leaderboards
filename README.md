@@ -1,20 +1,41 @@
 # Decathlon CSV contestant data to JSON leaderboards
 
-Takes a CSV file with contestant data, calculates scores, generates leaderboards, stores all of it
-in `<timestamp>/output.json` and returns a view for the generated file.
+Built with Flask.
 
-Built using Flask.
+Takes a CSV file with contestant data, calculates scores, generates leaderboards, stores all of it
+in `temp/<timestamp>/output.json` and returns a view for the generated file.
 
 ## Directory documentation
 
 `scripts/` - Stores the main logic of app.
+
 `static/` - Stores css file.
+
 `temp/` - Location to where generated JSON file will be saved.
+
 `templates/` - Views.
 
 ## Install
 
-TODO
+### With Docker
+
+```bash
+git clone https://github.com/NorthOC/decathlon_leaderboards
+cd decathlon_leaderboards
+docker build --tag decathlon-leaderboards .
+docker run decathlon-leaderboards
+```
+
+### Manual (no Docker)
+
+```bash
+git clone https://github.com/NorthOC/decathlon_leaderboards
+cd decathlon_leaderboards
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+flask run
+```
 
 You can test the app using `test.csv` file for upload.
 
