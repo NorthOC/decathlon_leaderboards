@@ -1,9 +1,9 @@
-# Decathlon CSV contestant data to JSON leaderboards
+# Decathlon Leaderboards
 
 Built with Flask.
 
-Takes a CSV file with contestant data, calculates scores, generates leaderboards, stores all of it
-in `temp/<timestamp>/output.json` and returns a view for the generated file.
+Takes a CSV file with contestant data, calculates scores, generates leaderboards, parses it
+in `temp/<timestamp>/output.json` and returns a view of the generated file.
 
 ## Directory documentation
 
