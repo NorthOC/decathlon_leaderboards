@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Decathlon Leaderboard Maker!</h1>
+    <i>supported formats: {{formats}}</i>
+    <hr>
+      <form method=post enctype=multipart/form-data>
+          <div class="display-block">
+            <input id='file' type=file name=file>
+          </div>
+
+          <div class="display-block">
+            <label for="delimiters">Delimiter:</label>
+            <select id="delimiters" name="delimiters">
+              <option value=";" selected>;</option>
+              <option value=",">,</option>
+            </select>
+          </div>
+
+        <input type="submit" value="Upload & View leaderboard">
+      </form>
+  </div>
+</body>
+</html>
